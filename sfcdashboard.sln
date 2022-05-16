@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sfcdashboard", "sfcdashboard\sfcdashboard.csproj", "{8AEC4C7E-D53A-498E-86DE-210CC98C982A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8AEC4C7E-D53A-498E-86DE-210CC98C982A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEC4C7E-D53A-498E-86DE-210CC98C982A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEC4C7E-D53A-498E-86DE-210CC98C982A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEC4C7E-D53A-498E-86DE-210CC98C982A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E72671D4-BD6A-4CB2-8438-D647D868C13F}
+	EndGlobalSection
+EndGlobal
