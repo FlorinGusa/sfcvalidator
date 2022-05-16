@@ -3,10 +3,113 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:sfcdashboard"
+        xmlns:vm="clr-namespace:sfcdashboard.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="580"
+        Width="930"
+        x:Name="Dashboard"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Window.DataContext>
+        <vm:NavigationViewModel></vm:NavigationViewModel>
+    </Window.DataContext>
     <Grid>
+        <!--Application Background-->
+        <Border Background="#9EEFE5" CornerRadius="10"></Border>
         
+        <!--Header-->
+        <Border Background="#4F7CAC"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Left"
+                CornerRadius="10,0,100,0"
+                Height="80"
+                Width="850">
+            <TextBlock Text="Salesforce Data Validator" 
+                       Style="{StaticResource HeaderStyle}"></TextBlock>
+        </Border>
+        
+        <!--Footer-->
+        <Border Background="#4F7CAC"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Right"
+                CornerRadius="100,0,10,0"
+                Height="80"
+                Width="850">
+            <TextBlock Text="" 
+                       Style="{StaticResource HeaderStyle}"></TextBlock>
+        </Border>
+
+
+        <!--Content Background-->
+        <Border Background="#E8F1F2" BorderThickness="0,5,0,5"
+                Height="480" Margin="0,10,0,0" CornerRadius="25"></Border>
+
+        <!--Layout-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"></ColumnDefinition>
+                <ColumnDefinition Width="180"></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="660"></ColumnDefinition>
+                <ColumnDefinition Width="25"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="370"></RowDefinition>
+                <RowDefinition Height="0"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="2"
+                  Grid.Column="1">
+                <TextBox x:Name="SearchBox"
+                           Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
+                           Style="{StaticResource SearchBoxStyle}"/>
+                <TextBlock Text="Search"
+                           Style="{StaticResource SearchTextStyle}"/>
+            </Grid>
+
+            <Grid Grid.Row="3"
+                  Grid.Column="1"
+                  Margin="0,10,0,0">
+                <ItemsControl ItemsSource="{Binding SourceCollection}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <RadioButton Content="{Binding MenuName}"
+                                             Tag="{Binding MenuImage}"
+                                             CommandParameter="{Binding MenuName}"
+                                             Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}, Path=DataContext.MenuCommand}"
+                                             Style="{StaticResource MenuButtonStyle}"
+                                             GroupName="MenuGroup"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+            
+            <!-- Page Container-->
+            <Grid Grid.Row="2"
+                  Grid.Column="3"
+                  Grid.RowSpan="2"
+                  Background="Transparent">
+                <ContentControl x:Name="Pages"
+                                Content="{Binding SelectedViewModel}"/>
+            </Grid>
+        </Grid>
+        <!--Close Button-->
+        <Button Height="32"
+                Width="32"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Command="{Binding CloseAppCommand}"
+                CommandParameter="{Binding ElementName=DashboardWindow}"
+                Style="{StaticResource CloseButtonStyle}"/>
     </Grid>
 </Window>
