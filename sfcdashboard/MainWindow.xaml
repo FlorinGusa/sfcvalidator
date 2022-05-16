@@ -19,28 +19,29 @@
     </Window.DataContext>
     <Grid>
         <!--Application Background-->
-        <Border Background="#9EEFE5" CornerRadius="10"></Border>
+        <Border Background="#133C55" CornerRadius="10"></Border>
         
         <!--Header-->
-        <Border Background="#4F7CAC"
+        <Border Background="#386FA4"
                 VerticalAlignment="Top"
                 HorizontalAlignment="Left"
                 CornerRadius="10,0,100,0"
                 Height="80"
-                Width="850">
+                Width="850"
+                MouseLeftButtonDown="DragWindow">
             <TextBlock Text="Salesforce Data Validator" 
                        Style="{StaticResource HeaderStyle}"></TextBlock>
         </Border>
         
         <!--Footer-->
-        <Border Background="#4F7CAC"
+        <Border Background="#59A5D8"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Right"
                 CornerRadius="100,0,10,0"
                 Height="80"
                 Width="850">
-            <TextBlock Text="" 
-                       Style="{StaticResource HeaderStyle}"></TextBlock>
+            <TextBlock Text="2022 - Florin Gusa E3F1AT" 
+                       Style="{StaticResource FooterStyle}"></TextBlock>
         </Border>
 
 

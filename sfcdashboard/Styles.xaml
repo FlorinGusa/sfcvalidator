@@ -11,6 +11,16 @@
         <Setter Property="Foreground" Value="#E8E8E8"/>
     </Style>
     
+    <Style x:Key="FooterStyle"
+           TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="0,25,25,0"/>
+        <Setter Property="FontSize" Value="12"/>
+
+        <Setter Property="Foreground" Value="#E8E8E8"/>
+    </Style>
+    
     <Style x:Key="CloseButtonStyle"
            TargetType="Button">
         <Setter Property="HorizontalAlignment" Value="Right"/>

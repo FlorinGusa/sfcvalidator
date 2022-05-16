@@ -133,8 +133,8 @@ namespace sfcdashboard.ViewModel
 
         public void CloseApp(object obj)
         {
-            MainWindow win = obj as MainWindow;
-            win.Close();
+            //check ongoing processes
+           System.Windows.Application.Current.Shutdown();
         }
 
         private ICommand _closeCommand;

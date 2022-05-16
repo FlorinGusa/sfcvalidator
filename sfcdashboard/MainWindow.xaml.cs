@@ -24,5 +24,10 @@ namespace sfcdashboard
         {
             InitializeComponent();
         }
+
+        public void DragWindow(object sender, MouseButtonEventArgs args)
+        {
+            DragMove();
+        }
     }
 }
