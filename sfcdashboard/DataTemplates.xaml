@@ -12,5 +12,9 @@
         <view:FileView/>
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:ConnectionsViewModel}">
+        <view:ConnectionsView/>
+    </DataTemplate>
+
 
 </ResourceDictionary>

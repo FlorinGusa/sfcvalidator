@@ -96,6 +96,10 @@ namespace sfcdashboard.ViewModel
                 case "File":
                     SelectedViewModel = new FileViewModel();
                     break;
+                case "Connections":
+                    SelectedViewModel = new ConnectionsViewModel();
+                    break;
+
 
             }
         }

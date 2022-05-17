@@ -98,14 +98,14 @@
                                    Foreground="Black"
                                    FontSize="18"
                                    Margin="60,0,0,0" />
-                        <Border x:Name="Highlighter"
+                        <!--<Border x:Name="Highlighter"
                                 Height="20"
                                 Width="4"
                                 Background="#564256"
                                 CornerRadius="2"
                                 HorizontalAlignment="Left"
                                 Margin="0,0,5,0"
-                                Visibility="Collapsed" />
+                                Visibility="Collapsed" />-->
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver"
@@ -119,9 +119,10 @@
                             <Setter Property="Background"
                                     TargetName="border"
                                     Value="#FC814A" />
-                            <Setter Property="Visibility"
+                            <!--<Setter Property="Visibility"
                                     TargetName="Highlighter"
-                                    Value="Visible" />
+                                    Value="Visible" />-->
+                            
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
