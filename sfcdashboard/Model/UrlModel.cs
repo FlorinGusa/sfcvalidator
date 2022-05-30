@@ -11,7 +11,8 @@ using sfcdashboard.Model;
 
 namespace sfcdashboard.Model
 {
-    class HomeModel
+    public class UrlItem
     {
+        public string url { get; set; }
     }
 }

@@ -12,16 +12,16 @@ namespace sfcdashboard.Model
         public string MenuImage { get; set; }
     }
 
-    public class HomeItems
+    public class InputItems
     {
-        public string HomeName { get; set; }
-        public string HomeImage { get; set; }
+        public string InputName { get; set; }
+        public string InputImage { get; set; }
     }
 
-    public class ReportItems
+    public class InfoItems
     {
-        public string ReportName { get; set; }
-        public string ReportImage { get; set; }
+        public string InfoName { get; set; }
+        public string InfoImage { get; set; }
     }
 
     public class ConnectionItems

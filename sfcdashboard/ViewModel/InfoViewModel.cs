@@ -12,12 +12,12 @@ using System.Windows.Input;
 using sfcdashboard.Model;
 namespace sfcdashboard.ViewModel
 {
-    public class HomeViewModel : INotifyPropertyChanged
+    public class InfoViewModel : INotifyPropertyChanged
     {
         //private CollectionViewSource HomeItemsCollection;
         //public ICollectionView HomeSourceCollection => HomeItemsCollection.View;
 
-        public HomeViewModel()
+        public InfoViewModel()
         {
            // ObservableCollection<HomeItems> homeItems = new ObservableCollection<HomeItems>
             //{

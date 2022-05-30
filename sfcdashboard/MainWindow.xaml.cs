@@ -23,6 +23,7 @@ namespace sfcdashboard
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         public void DragWindow(object sender, MouseButtonEventArgs args)

@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace sfcdashboard.View
 {
     /// <summary>
-    /// Interaction logic for HomeView.xaml
+    /// Interaction logic for InfoView.xaml
     /// </summary>
     public partial class ConnectionsView : UserControl
     {

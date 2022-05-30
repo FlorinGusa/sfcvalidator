@@ -75,11 +75,11 @@
                 <ControlTemplate TargetType="RadioButton">
                     <Grid Margin="0,0,0,0">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="180" />
+                            <ColumnDefinition Width="190" />
                         </Grid.ColumnDefinitions>
                         <Border x:Name="border"
                                 Background="AliceBlue"
-                                CornerRadius="1"
+                                CornerRadius="4"
                                 BorderThickness="0" />
                         <Image x:Name="SidebarRadioButtonMenuIcon"
                                Grid.Row="0"
@@ -94,7 +94,7 @@
                                    Width="120"
                                    Text="{TemplateBinding Property=Content}"
                                    VerticalAlignment="Center"
-                                   HorizontalAlignment="Left"
+                                   HorizontalAlignment="Center"
                                    Foreground="Black"
                                    FontSize="18"
                                    Margin="60,0,0,0" />

@@ -1,6 +1,7 @@
 ﻿<Application x:Class="sfcdashboard.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
              xmlns:local="clr-namespace:sfcdashboard"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
@@ -8,6 +9,7 @@
                 <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles.xaml"/>
                 <ResourceDictionary Source="DataTemplates.xaml"/>
+                <hc:Theme/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
              

@@ -26,18 +26,18 @@ namespace sfcdashboard.ViewModel
             //represents dynamic data collection that provides notification when items get added, removed or updated
             ObservableCollection<MenuItems> menuItems = new ObservableCollection<MenuItems>
             {
-                new MenuItems{MenuName="Home", MenuImage= @"Assets/homeIcon.png"},
-                new MenuItems{MenuName="File", MenuImage= @"Assets/fileIcon.png"},
-                new MenuItems{MenuName="Data", MenuImage= @"Assets/dataIcon.png"},
-                new MenuItems{MenuName="Reports", MenuImage= @"Assets/reportsIcon.png"},
-                new MenuItems{MenuName="Connections", MenuImage= @"Assets/connectionIcon.png"},
-                new MenuItems{MenuName="Settings", MenuImage= @"Assets/settingsIcon.png"},
+                new MenuItems{MenuName="Input", MenuImage= @"Assets/homeIcon.png"},
+                new MenuItems{MenuName="Info", MenuImage= @"Assets/fileIcon.png"},
+                new MenuItems{MenuName="Runs", MenuImage= @"Assets/dataIcon.png"},
+                new MenuItems{MenuName="Builds", MenuImage= @"Assets/reportsIcon.png"},
+                new MenuItems{MenuName="Tasks", MenuImage= @"Assets/connectionIcon.png"},
+                new MenuItems{MenuName="Issues", MenuImage= @"Assets/settingsIcon.png"},
             };
 
             MenuItemsCollection = new CollectionViewSource { Source = menuItems };
             MenuItemsCollection.Filter += MenuItems_Filter;
 
-            SelectedViewModel = new HomeViewModel();
+            SelectedViewModel = new InputViewModel();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -90,11 +90,11 @@ namespace sfcdashboard.ViewModel
             Console.WriteLine(parameter.ToString());
             switch (parameter)
             {
-                case "Home":
-                    SelectedViewModel = new HomeViewModel();
+                case "Input":
+                    SelectedViewModel = new InputViewModel();
                     break;
-                case "File":
-                    SelectedViewModel = new FileViewModel();
+                case "Info":
+                    SelectedViewModel = new InfoViewModel();
                     break;
                 case "Connections":
                     SelectedViewModel = new ConnectionsViewModel();
@@ -119,7 +119,7 @@ namespace sfcdashboard.ViewModel
 
         private void ShowHome()
         {
-            SelectedViewModel = new FileViewModel();
+            SelectedViewModel = new InfoViewModel();
         }
 
         private ICommand _backHomeCommand;

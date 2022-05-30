@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="sfcdashboard.View.InputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:sfcdashboard.View" xmlns:viewmodel="clr-namespace:sfcdashboard.ViewModel" xmlns:hc="https://handyorg.github.io/handycontrol" d:DataContext="{d:DesignInstance Type=viewmodel:InputViewModel}"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="650">
+    <UserControl.Style>
+        <Style>
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="UserControl.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         From="0.0"
+                                         To="1.0"
+                                         Duration="0:0:0.5"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Style>
+
+    <Grid Background="#E8F1F2">
+
+        <TextBlock Text="Input"
+                   FontSize="24"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="5,12,0,0"/>
+
+        <Grid Height="40"
+              Width="180"
+              HorizontalAlignment="Right"
+              VerticalAlignment="Top"
+              Margin="0,10,15,0">
+            <TextBox x:Name="SearchBox"
+                       Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"
+                       Style="{StaticResource SearchBoxStyle}"/>
+
+            <TextBlock Text="Search"
+                       Style="{StaticResource SearchTextStyle}"/>
+
+        </Grid>
+
+        <Grid Margin="10,80,15,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="170"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" >Start URLs</TextBlock>
+
+
+            <ListBox Grid.Row="0" Margin="0,30,0,39" ItemsSource="{Binding SourceCollection}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding Path=url}" />
+                        </StackPanel>
+                    </DataTemplate> 
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Button Grid.Row="0" Width="59" Margin="0,136,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">+ Add</Button>
+
+            <Button Grid.Row="0" Margin="70,136,0,0"  Click="button1_Click" HorizontalAlignmenWt="Left" VerticalAlignment="Top" >
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Text"/>
+                        <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="6" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                    </StackPanel>
+
+                </Button.Content>
+                <Button.ContextMenu>
+                    <ContextMenu >
+                        <MenuItem Header="Import from CSV"/>
+                        <MenuItem Header="Edit en   tries"/>
+                        <MenuItem Header="Third file"/>
+                        <MenuItem Header="Fourth file"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+
+            <TextBlock Grid.Row="1">Maximum pages (optional)</TextBlock>
+            <hc:NumericUpDown Grid.Row="1" Margin="0,27,0,0" Height="23" VerticalAlignment="Top"  ></hc:NumericUpDown>
+
+            <TextBlock Grid.Row="2">Maximum pages per url(optional)</TextBlock>
+            <hc:NumericUpDown Grid.Row="2"  Margin="0,27,0,23" />
+
+
+        </Grid>
+    </Grid>
+</UserControl>
