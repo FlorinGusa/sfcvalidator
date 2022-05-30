@@ -3,14 +3,21 @@
 
     <Style x:Key="HeaderStyle"
            TargetType="TextBlock">
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="25,0,0,25"/>
         <Setter Property="FontSize" Value="24"/>
-
-        <Setter Property="Foreground" Value="#E8E8E8"/>
+        <Setter Property="Foreground" Value="#FF8E8E8E"/>
     </Style>
-    
+
+    <Style x:Key="SubheaderStyle"
+           TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="Foreground" Value="#222222"/>
+    </Style>
+
+    <Style x:Key="ButtonStyle"
+           TargetType="Button">
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+    </Style>
+
     <Style x:Key="FooterStyle"
            TargetType="TextBlock">
         <Setter Property="HorizontalAlignment" Value="Right"/>
@@ -26,9 +33,7 @@
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Margin" Value="25,0,0,25"/>
-        <Setter Property="FontSize" Value="24"/>
-
-        <Setter Property="Background" Value="DarkRed"/>
+        <Setter Property="Background" Value="Red"/>
       
     </Style>
 
@@ -78,51 +83,44 @@
                             <ColumnDefinition Width="190" />
                         </Grid.ColumnDefinitions>
                         <Border x:Name="border"
-                                Background="AliceBlue"
-                                CornerRadius="4"
+                                CornerRadius="5"
+                                Width="0"
+                                HorizontalAlignment="Left"
                                 BorderThickness="0" />
-                        <Image x:Name="SidebarRadioButtonMenuIcon"
-                               Grid.Row="0"
-                               Width="30"
-                               Stretch="Fill"
-                               RenderOptions.BitmapScalingMode="Fant"
-                               Source="{Binding Path=Tag, RelativeSource={RelativeSource TemplatedParent}}"
-                               HorizontalAlignment="Left"
-                               Margin="4,0,0,0" />
                         <TextBlock x:Name="SidebarRadioButtonMenuText"
                                    Grid.Row="1"
-                                   Width="120"
+                                   Width="100"
                                    Text="{TemplateBinding Property=Content}"
                                    VerticalAlignment="Center"
-                                   HorizontalAlignment="Center"
+                                   HorizontalAlignment="Left"
                                    Foreground="Black"
                                    FontSize="18"
-                                   Margin="60,0,0,0" />
-                        <!--<Border x:Name="Highlighter"
+                                   Margin="10,0,0,0" />
+                        <Border x:Name="Highlighter"
                                 Height="20"
                                 Width="4"
                                 Background="#564256"
                                 CornerRadius="2"
                                 HorizontalAlignment="Left"
                                 Margin="0,0,5,0"
-                                Visibility="Collapsed" />-->
+                                Visibility="Collapsed" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver"
                                  Value="True">
                             <Setter Property="Background"
                                     TargetName="border"
-                                    Value="#FC814A" />
+                                    Value="#FFB5B5B5" />
                         </Trigger>
                         <Trigger Property="IsChecked"
                                  Value="True">
                             <Setter Property="Background"
                                     TargetName="border"
-                                    Value="#FC814A" />
-                            <!--<Setter Property="Visibility"
+                                    Value="#FF4A86FC" />
+                            <Setter Property="Visibility"
                                     TargetName="Highlighter"
-                                    Value="Visible" />-->
-                            
+                                    Value="Visible" />
+
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:sfcdashboard.View"
+             xmlns:local="clr-namespace:sfcdashboard.View" xmlns:viewmodel="clr-namespace:sfcdashboard.ViewModel" 
+             xmlns:materialDesign="https://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DataContext="{d:DesignInstance Type=viewmodel:InfoViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="650">
     <UserControl.Style>
@@ -12,7 +14,7 @@
                 <EventTrigger RoutedEvent="UserControl.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
-                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity"
                                          From="0.0"
                                          To="1.0"
                                          Duration="0:0:0.5"/>
@@ -26,7 +28,7 @@
 
     <Grid Background="#E8F1F2">
 
-        <TextBlock Text="File"
+        <TextBlock Text="Info"
                    FontSize="24"
                    HorizontalAlignment="Left"
                    VerticalAlignment="Top"
@@ -46,26 +48,54 @@
 
         </Grid>
 
-        <ItemsControl ItemsSource="{Binding HomeSourceCollection}"
-                      Height="350"
-                      Width="650"
-                      Margin="0,40,0,0">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                        <RadioButton Content="{Binding MenuName}"
-                                             Tag="{Binding MenuImage}"
-                                             GroupName="HomeGroup"/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
+        <Grid Margin="10,80,15,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="170"></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
 
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <UniformGrid Columns="5"
-                                 Rows="3"/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-        </ItemsControl>
 
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" >Filter by segment</TextBlock>
+
+            <ComboBox x:Name = "comboBox1"  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment = "Top" Width = "380"
+             IsEditable = "True"
+             Margin="0,21,0,0">
+                <ComboBoxItem Content = "Item #1" />
+                <ComboBoxItem Content = "Item #2" />
+                <ComboBoxItem Content = "Item #3" />
+            </ComboBox>
+            
+
+            <Button Grid.Row="0" Margin="70,136,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Text"/>
+                        <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="6" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
+                    </StackPanel>
+
+                </Button.Content>
+                <Button.ContextMenu>
+                    <ContextMenu >
+                        <MenuItem Header="Import from CSV"/>
+                        <MenuItem Header="Edit en   tries"/>
+                        <MenuItem Header="Third file"/>
+                        <MenuItem Header="Fourth file"/>
+                    </ContextMenu>
+                </Button.ContextMenu>
+            </Button>
+
+            <TextBlock Grid.Row="1">Maximum pages (optional)</TextBlock>
+
+            <TextBlock Grid.Row="2">Maximum pages per url(optional)</TextBlock>
+
+
+        </Grid>
 
     </Grid>
 </UserControl>
