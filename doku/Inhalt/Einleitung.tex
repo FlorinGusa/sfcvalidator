@@ -1,0 +1,64 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Einleitung}
+\label{sec:Einleitung}
+
+
+\subsection{Projektumfeld} 
+\label{sec:Projektumfeld}
+\begin{itemize}
+	\item Die folgende Projektdokumentation schildert den Ablauf des IHK-Abschlussprojektes, welches der Autor im Rahmen seiner Ausbildung zum Fachinformatiker mit Fachrichtung Anwendungsentwicklung
+	durchgeführt hat. Ausbildungsbetrieb ist die Fanuc Europe GmbH, einen globalen Hersteller von Fabrikautomation und Industrierobotern sowohl CNC-Systemen. Mit über 28.9 Millionen installierten Produkten weltweit ist FANUC das führendes Unternehmen
+	auf dem Gebiet der Fertigungstechnik.
+\end{itemize}
+
+\subsection{Projektziel} 
+\label{sec:Projektziel}
+\begin{itemize}
+	\item Im CRM-System der Fanuc Europe befinden sich über 220.000 Kundenkonten, die Daten wie
+	Adresse, Telefonnummer und Website des Kunden enthalten. Zur Automatisierung der
+	Verwaltung dieser Kunden wird die Salesforce CRM-Plattform verwendet.
+	\item Da es unmöglich ist, Änderungen an den Kundendaten manuell zu verfolgen, ist die Erstellung
+	eines Web-Scraping-Systems geplannt. Diese Anwendung automatisiert die jeweiligen
+	Kontaktseiten Im Internet herauslesen und vergleicht sie mit den aktuellen Daten im
+	CRM-System.
+\end{itemize}
+
+
+\subsection{Projektbegründung} 
+\label{sec:Projektbegruendung}
+\begin{itemize}
+	\item Das Unternehmen speichert die Informationen in der Regel über die gesamte Organisation verteilt, d.h. teilweise redundant in verschiedenen Systemen, aber oft unvollständig.
+	Dies hat zur Folge, dass manche Unternehmensabteilungen nur vermeintlich mit den gleichen Daten arbeiten wie ihre Kollegen.
+	Die für den Geschäftserfolg entscheidende 360-Grad-Sicht auf Kunden oder Geschäftspartner fehlt völlig. Zudem ist die Gefahr groß,
+	dass minderwertige Daten als Grundlage für strategische Geschäftsentscheidungen verwendet werden, aus denen wiederum Unternehmensziele abgeleitet und Geschäftsprozesse modelliert werden. 
+	Damit das Unternehmen erfolgreich am Markt agieren kann, braucht es also qualitativ hochwertige Daten.
+	Das Hauptziel besteht darin, die manuelle Arbeit zu reduzieren, die oft dazu führt, dass falsche Daten im System vorhanden sind. Dies führt zu Problemen bei der Datenqualität im Unternehmen. 
+	Stattdessen kann ein Administrator einen automatisierten Job einmal pro Woche ausführen und wird über Änderungen an den Kundendaten informiert, was zu höherer Effizienz und weniger Zeitverlust bei der Suche nach den richtigen Daten führt.
+\end{itemize}
+
+\subsection{Projektschnittstellen} 
+\label{sec:Projektschnittstellen}
+\begin{itemize}
+	\item Das Hauptaugenmerk liegt auf der Auswahl derjenigen Softwarekomponenten, die sich am besten in die Prozesse und die Systemumgebung des Unternehmens implementieren lassen. 
+	Eine geeignete Software kann verschiedene Faktoren der Datenqualität prüfen und erhöhen. Konkret kann dies eine Adressprüfung, eine Dublettenprüfung oder eine E-Mail-Validierung sein.
+	Bei der Auswahl dieser Softwarekomponenten müssen in jedem Fall bestehende CRM-, ERP- oder andere datenhaltende Systeme berücksichtigt werden.
+	Die aktuellen Daten werden von der CRM-Plattform Salesforce unter Verwendung der WSDL-Funktionen in eine C\#-Anwendung übernommen, die WPF für die Präsentationsschicht verwendet und einer klaren MVVM-Architektur folgt.
+	Dadurch wird eine klare Schnittstelle geschaffen, über die alle Teilsysteme laufen.
+	Die Aufgabe der C\#-Software besteht darin, Datenmanipulationsaufgaben und Web-Scraping-Dienste, die auf Python laufen, auf einfache Weise auszuführen. 
+	IronPy wird als Schnittstelle zwischen C\# und der Python-Laufzeitumgebung verwendet.
+
+	\item Mit welchen anderen Systemen interagiert die Anwendung (technische Schnittstellen)?
+	\item Wer genehmigt das Projekt \bzw stellt Mittel zur Verfügung? 
+	\item Wer sind die Benutzer der Anwendung?
+	\item Wem muss das Ergebnis präsentiert werden?
+\end{itemize}
+
+
+\subsection{Projektabgrenzung} 
+\label{sec:Projektabgrenzung}
+\begin{itemize}
+	\item Eine der größten Herausforderungen bei der Erstellung dieses Projekts ist die Definition dessen, was geschehen soll.
+	Daher ist es wichtig, den vom CRM-Entwicklungsteam benötigten Output klar zu definieren. 
+	Es wurde klargestellt, dass ein System, das Daten innerhalb der CRM-Plattform automatisch überschreibt, nicht erwünscht ist, sondern den Benutzer mit Hilfe von logisch aufgebauten Berichten benachrichtigt 
+	Dies führt zu einer geringeren Fehleranfälligkeit, da Websites dynamisch sein oder sich ändernde Elemente aufweisen können, mit denen der Web Scraper Probleme bekommen kann.
+\end{itemize}

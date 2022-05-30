@@ -1,0 +1,126 @@
+% !TEX root = ../Projektdokumentation.tex
+\section{Analysephase} 
+\label{sec:Analysephase}
+
+
+\subsection{Ist-Analyse} 
+\label{sec:IstAnalyse}
+\begin{itemize}
+	\item Aufgrund der großen Anzahl von Kundenstamm Setzen ist eine manuelle Prüfung der Daten nicht
+	möglich. Aufgrund vorgangenen Analysen geht man von Fehlerhaften Datensätzen im Umfang von 20%. 
+	Es bestehen Zweifel, wenn zwei Adressen vorhanden sind, da nicht klar ist, auf welche sie sich beziehen. 
+	Die Bezeichnungen "Straßenadresse 1" und "Straßenadresse 2" sind interpretationsbedürftig und sollten nach Gelegenheit geändert werden. 
+	Die Namensänderung innerhalb einer Datenbank ist oft ein komplizierter Prozess und sollte zumindest mit einer Beschreibung dokumentiert werden.
+\end{itemize}
+
+
+\subsection{Wirtschaftlichkeitsanalyse}
+\label{sec:Wirtschaftlichkeitsanalyse}
+\begin{itemize}
+	\item Das Vertriebsteam hat festgestellt, dass es regelmäßig Rückläufer für ungültige E-Mails erhält. 
+	Außerdem erhalten einige Interessenten und Kunden nicht den richtigen Inhalt, weil sie nicht richtig qualifiziert sind. 
+	Man stellt fest, dass die E-Mail-Adresse das falsche Format hat und der Kundentyp falsch ist.
+	Derzeit ist es erforderlich, dass ein Vertriebsmitarbeiter direkt vom Kunden über Änderungen in den Kundenkontaktdaten informiert wird, oder dass der Kunde im Rahmen der Kommunikation darauf aufmerksam gemacht wird.
+	Dies führt jedoch zu Verzögerungen, Unannehmlichkeiten und Missverständnissen für die Kunden, was wiederum den wirtschaftlichen Faktor des Unternehmensimages beeinträchtigt.
+	Die wirtschaftliche Berücksichtigung und die Entscheidung, ob die Realisierung des Projekts gerechtfertigt ist, wird in den folgenden Abschnitten vorgenommen.
+
+\end{itemize}
+
+
+\subsubsection{\gqq{Make or Buy}-Entscheidung}
+\label{sec:MakeOrBuyEntscheidung}
+\begin{itemize}
+	\item Da es sich bei den eingehenden Dokumenten um firmenspezifische Prozesse der Fanuc Europe GmbH handelt, ist eine Lösung durch ein zugekauftes Produkt nicht möglich. 
+	Daher muss eine Lösung durch die Fanuc Europe GmbH entwickelt werden.
+\end{itemize}
+
+
+\subsubsection{Projektkosten}
+\label{sec:Projektkosten}
+\begin{itemize}
+	\item Welche Kosten fallen bei der Umsetzung des Projekts im Detail an (\zB Entwicklung, Einführung/Schulung, Wartung)?
+\end{itemize}
+
+\paragraph{Beispielrechnung (verkürzt)}
+Die Kosten für die Durchführung des Projekts setzen sich sowohl aus Personal-, als auch aus Ressourcenkosten zusammen.
+Laut Tarifvertrag verdient ein Auszubildender im dritten Lehrjahr pro Monat \eur{1000} Brutto. 
+
+\begin{eqnarray}
+8 \mbox{ h/Tag} \cdot 220 \mbox{ Tage/Jahr} = 1760 \mbox{ h/Jahr}\\
+\eur{1000}\mbox{/Monat} \cdot 13,3 \mbox{ Monate/Jahr} = \eur{13300} \mbox{/Jahr}\\
+\frac{\eur{13300} \mbox{/Jahr}}{1760 \mbox{ h/Jahr}} \approx \eur{7,56}\mbox{/h}
+\end{eqnarray}
+
+Es ergibt sich also ein Stundenlohn von \eur{7,56}. 
+Die Durchführungszeit des Projekts beträgt 70 Stunden. Für die Nutzung von Ressourcen\footnote{Räumlichkeiten, Arbeitsplatzrechner etc.} wird 
+ein pauschaler Stundensatz von \eur{15} angenommen. Für die anderen Mitarbeiter wird pauschal ein Stundenlohn von \eur{25} angenommen. 
+Eine Aufstellung der Kosten befindet sich in Tabelle~\ref{tab:Kostenaufstellung} und sie betragen insgesamt \eur{2739,20}.
+\tabelle{Kostenaufstellung}{tab:Kostenaufstellung}{Kostenaufstellung.tex}
+
+
+\subsubsection{Amortisationsdauer}
+\label{sec:Amortisationsdauer}
+\begin{itemize}
+	\item Im Folgenden wird festgestellt, an welchem Punkt sich die Entwicklung der Software amortisiert hat.
+    Durch die Implementierung dieser Software in die internen Geschäftsabläufe wird der Faktor Datenqualität erhöht. 
+ 	Es gibt eine große Anzahl verschiedener Dimensionen und Kriterien, mit denen die Datenqualität beschrieben werden kann. 
+	Es gibt keine Richtlinien, wie viele Dimensionen man verwenden sollte. 
+	DAMA zum Beispiel definiert sechzig Dimensionen, während die meisten DQM-Software-Anbieter in der Regel nur fünf Dimensionen vorschlagen.
+	Durch die Art und Weise, wie die Software aufgebaut ist, wird das Potenzial für Unannehmlichkeiten für den Kunden reduziert - was den potenziellen Handel schneller und konsistenter macht.
+	Die CRM-Administratoren haben außerdem einen besseren Überblick und können inkonsistente Daten besser identifizieren.
+	Da es möglich ist, die Software automatisch im Rahmen von geplanten Arbeitsabläufen auszuführen, ist der manuellen Arbeitsaufwand sehr gering, wodurch die Personalkosten auf ein Minimum reduziert werden.
+	Im Folgenden soll nun die Arbeitszeitersparnis in tabellarischer Form ermittelt werden. Die Anzahl der Vorgänge
+	pro Quartal und die Zeit pro Vorgang wurden durch den Salesforce-Administrator ermittelt
+\end{itemize}
+
+\paragraph{Beispielrechnung (verkürzt)}
+Bei einer Zeiteinsparung von 10 Minuten am Tag für jeden der 25 Anwender und 220 Arbeitstagen im Jahr ergibt sich eine gesamte Zeiteinsparung von 
+\begin{eqnarray}
+25 \cdot 220 \mbox{ Tage/Jahr} \cdot 10 \mbox{ min/Tag} = 55000 \mbox{ min/Jahr} \approx 917 \mbox{ h/Jahr} 
+\end{eqnarray}
+
+Dadurch ergibt sich eine jährliche Einsparung von 
+\begin{eqnarray}
+917 \mbox{h} \cdot \eur{(25 + 15)}{\mbox{/h}} = \eur{36680}
+\end{eqnarray}
+
+Die Amortisationszeit beträgt also $\frac{\eur{2739,20}}{\eur{36680}\mbox{/Jahr}} \approx 0,07 \mbox{ Jahre} \approx 4 \mbox{ Wochen}$.
+
+
+\subsection{Nutzwertanalyse}
+\label{sec:Nutzwertanalyse}
+\begin{itemize}
+	\item TODO: Kriterien gewichtung, Tabelle erstellen.
+\end{itemize}
+
+\paragraph{Beispiel}
+Ein Beispiel für eine Entscheidungsmatrix findet sich in Kapitel~\ref{sec:Architekturdesign}: \nameref{sec:Architekturdesign}.
+
+
+\subsection{Anwendungsfälle}
+\label{sec:Anwendungsfaelle}
+\begin{itemize}
+	\item Welche Anwendungsfälle soll das Projekt abdecken?
+	\item Einer oder mehrere interessante (!) Anwendungsfälle könnten exemplarisch durch ein Aktivitätsdiagramm oder eine \ac{EPK} detailliert beschrieben werden. 
+\end{itemize}
+
+\paragraph{Beispiel}
+Ein Beispiel für ein Use Case-Diagramm findet sich im \Anhang{app:UseCase}.
+
+
+\subsection{Qualitätsanforderungen}
+\label{sec:Qualitaetsanforderungen}
+\begin{itemize}
+	\item Welche Qualitätsanforderungen werden an die Anwendung gestellt (\zB hinsichtlich Performance, Usability, Effizienz \etc (siehe \citet{ISO9126}))?
+\end{itemize}
+
+
+\subsection{Lastenheft/Fachkonzept}
+\label{sec:Lastenheft}
+\begin{itemize}
+	\item Auszüge aus dem Lastenheft/Fachkonzept, wenn es im Rahmen des Projekts erstellt wurde.
+	\item Mögliche Inhalte: Funktionen des Programms (Muss/Soll/Wunsch), User Stories, Benutzerrollen
+\end{itemize}
+
+\paragraph{Beispiel}
+Ein Beispiel für ein Lastenheft findet sich im \Anhang{app:Lastenheft}. 
