@@ -24,10 +24,10 @@ namespace sfcdashboard.ViewModel
             ObservableCollection<UrlItem> homeItems = new ObservableCollection<UrlItem>()
             {
                 new UrlItem { url="https://www.porsche.de" },
-                new UrlItem { url="https://www.porsche.de" },
-                new UrlItem { url="https://www.porsche.de" },
-                new UrlItem { url="https://www.porsche.de" },
-                new UrlItem { url="https://www.porsche.de" },
+                new UrlItem { url="https://www.fanuc.eu" },
+                new UrlItem { url="https://www.daimler.de" },
+                new UrlItem { url="https://www.h4tfg9bzh.de" },
+                new UrlItem { url="https://www.youtube.com" },
 
             };
 

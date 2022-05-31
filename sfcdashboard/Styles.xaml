@@ -98,12 +98,12 @@
                                    Margin="10,0,0,0" />
                         <Border x:Name="Highlighter"
                                 Height="20"
-                                Width="4"
-                                Background="#564256"
+                                Width="2"
+                                Background="Black"
                                 CornerRadius="2"
                                 HorizontalAlignment="Left"
                                 Margin="0,0,5,0"
-                                Visibility="Collapsed" />
+                                Visibility="Visible" />
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver"
@@ -114,12 +114,10 @@
                         </Trigger>
                         <Trigger Property="IsChecked"
                                  Value="True">
+
                             <Setter Property="Background"
-                                    TargetName="border"
-                                    Value="#FF4A86FC" />
-                            <Setter Property="Visibility"
                                     TargetName="Highlighter"
-                                    Value="Visible" />
+                                    Value="Aqua" />
 
                         </Trigger>
                     </ControlTemplate.Triggers>

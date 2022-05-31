@@ -2,12 +2,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:sfcdashboard.View" xmlns:viewmodel="clr-namespace:sfcdashboard.ViewModel" 
-             xmlns:materialDesign="https://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+             TextElement.FontWeight="Regular"
+             TextElement.FontSize="13"
+             TextOptions.TextFormattingMode="Ideal"
+             TextOptions.TextRenderingMode="Auto"
+             Background="{DynamicResource MaterialDesignPaper}"
+             FontFamily="{DynamicResource MaterialDesignFont}"
+             xmlns:local="clr-namespace:sfcdashboard.View" xmlns:viewmodel="clr-namespace:sfcdashboard.ViewModel" xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
              d:DataContext="{d:DesignInstance Type=viewmodel:InfoViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="650">
+           >
     <UserControl.Style>
         <Style>
             <Style.Triggers>
@@ -54,46 +61,42 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="170"></RowDefinition>
-                <RowDefinition Height="60"></RowDefinition>
+                <RowDefinition Height="93"></RowDefinition>
+                <RowDefinition Height="137"></RowDefinition>
                 <RowDefinition Height="80"></RowDefinition>
-
-
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" >Filter by segment</TextBlock>
+            <TextBlock Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Height="16" Width="99">Filter by segment</TextBlock>
 
-            <ComboBox x:Name = "comboBox1"  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment = "Top" Width = "380"
+            <ComboBox x:Name = "comboBox1"  Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment = "Top" Width = "390"
              IsEditable = "True"
-             Margin="0,21,0,0">
+             Margin="0,24,0,0" Height="24">
                 <ComboBoxItem Content = "Item #1" />
                 <ComboBoxItem Content = "Item #2" />
                 <ComboBoxItem Content = "Item #3" />
             </ComboBox>
-            
 
-            <Button Grid.Row="0" Margin="70,136,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" >
-                <Button.Content>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Text"/>
-                        <Path x:Name="BtnArrow" Margin="4" VerticalAlignment="Center" Width="6" Fill="#FF527DB5" Stretch="Uniform" HorizontalAlignment="Right" Data="F1 M 301.14,-189.041L 311.57,-189.041L 306.355,-182.942L 301.14,-189.041 Z "/>
-                    </StackPanel>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" Height="16" Width="82">Not older than</TextBlock>
+            <mah:DateTimePicker Margin="10,21,116,42" Grid.Column="1"/>
 
-                </Button.Content>
-                <Button.ContextMenu>
-                    <ContextMenu >
-                        <MenuItem Header="Import from CSV"/>
-                        <MenuItem Header="Edit en   tries"/>
-                        <MenuItem Header="Third file"/>
-                        <MenuItem Header="Fourth file"/>
-                    </ContextMenu>
-                </Button.ContextMenu>
-            </Button>
+            <TextBlock Grid.Row="1">Select event</TextBlock>
+            <ComboBox x:Name = "comboBox1_Copy" HorizontalAlignment="Left" Width = "390"
+                IsEditable = "True" Height="24" Grid.Row="1" Margin="0,27,0,0" VerticalAlignment="Top">
+                <ComboBoxItem Content = "Item #1" />
+                <ComboBoxItem Content = "Item #2" />
+                <ComboBoxItem Content = "Item #3" />
+            </ComboBox>
 
-            <TextBlock Grid.Row="1">Maximum pages (optional)</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="2">Sort by</TextBlock>
+            <ComboBox x:Name = "comboBox1_Copy1" HorizontalAlignment="Left" Width = "134"
+                IsEditable = "True" Height="24" Grid.Row="1" Margin="10,27,0,0" Grid.Column="1" VerticalAlignment="Top">
+                <ComboBoxItem Content = "Name" />
+                <ComboBoxItem Content = "Item #2" />
+                <ComboBoxItem Content = "Item #3" />
+            </ComboBox>
 
-            <TextBlock Grid.Row="2">Maximum pages per url(optional)</TextBlock>
-
+            <Button Margin="0,19,0,29" Grid.Row="2">Generate Log</Button>
+            <Button Margin="0,19,116,29" Grid.Row="2" Grid.Column="1">Preview Log</Button>
 
         </Grid>
 

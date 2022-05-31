@@ -92,12 +92,12 @@
             <mah:NumericUpDown Minimum="0"
                    Maximum="10000"
                    Interval="1"
-                   StringFormat="C2" Margin="0,35,0,35" Grid.Row="1" />
+                   Margin="0,35,0,35" Grid.Row="1" />
             <TextBlock Grid.Row="2">Maximum pages per url(optional)</TextBlock>
             <mah:NumericUpDown Minimum="0"
                 Maximum="10000"
                 Interval="1"
-                StringFormat="C2" Margin="0,25,0,25" Grid.Row="2" />
+                Margin="0,25,0,25" Grid.Row="2" />
 
         </Grid>
     </Grid>
