@@ -96,8 +96,8 @@ namespace sfcdashboard.ViewModel
                 case "Info":
                     SelectedViewModel = new InfoViewModel();
                     break;
-                case "Connections":
-                    SelectedViewModel = new ConnectionsViewModel();
+                case "Issues":
+                    SelectedViewModel = new IssuesViewModel();
                     break;
 
 

@@ -14,10 +14,7 @@ using System.Windows.Shapes;
 
 namespace sfcdashboard.View
 {
-    /// <summary>
-    /// Interaction logic for IssuesView.xaml
-    /// </summary>
-    public partial class IssuesView : Window
+    public partial class IssuesView : UserControl
     {
         public IssuesView()
         {
