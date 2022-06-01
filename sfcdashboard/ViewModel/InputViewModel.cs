@@ -3,7 +3,6 @@ using System.ComponentModel;
 using System.Windows.Data;
 using System.Windows.Input;
 using sfcdashboard.Model;
-using sfcdashboard.Utils;
 
 namespace sfcdashboard.ViewModel
 {

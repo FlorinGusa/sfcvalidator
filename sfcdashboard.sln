@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.645
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sfcdashboard", "sfcdashboard\sfcdashboard.csproj", "{8AEC4C7E-D53A-498E-86DE-210CC98C982A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scraper", "Scraper\Scraper.csproj", "{A425A68F-B205-4779-B66B-AF2EA1F29691}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8AEC4C7E-D53A-498E-86DE-210CC98C982A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AEC4C7E-D53A-498E-86DE-210CC98C982A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AEC4C7E-D53A-498E-86DE-210CC98C982A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A425A68F-B205-4779-B66B-AF2EA1F29691}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A425A68F-B205-4779-B66B-AF2EA1F29691}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A425A68F-B205-4779-B66B-AF2EA1F29691}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A425A68F-B205-4779-B66B-AF2EA1F29691}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
