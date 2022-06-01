@@ -1,22 +1,23 @@
 ﻿using System;
 using Scraper.pyScraper;
 
-namespace Scraper // Note: actual namespace depends on the project name.
+namespace Scraper
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("WEBSCRAPER");
+            Console.WriteLine("Extracting emails");
             Console.WriteLine("__________________");
-            var innerHtml = WebData.GetHtml("https://en.rte.pt/home").InnerHtml;
-            Console.WriteLine(WebData.getEmailsFromHTML(innerHtml));
 
-            //List<string> links = WebData.GetLinks(new Uri("https://www.fanuc.eu/de/en"));
-            //for (int i = 0; i < links.Count; i++)
-            //{
-            //    Console.WriteLine(links[i]);
-            //}
+            var _linkList = Constants.Urls;
+            for (int i = 0; i < _linkList.LongLength; i++)
+            {
+                if (WebData.GetHtml(_linkList[i]) != null)
+                {
+                    Console.WriteLine(WebData.getEmailsFromHTML(WebData.GetHtml(_linkList[i]).InnerHtml));
+                }
+            }
 
         }
     }

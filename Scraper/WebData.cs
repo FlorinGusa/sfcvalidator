@@ -16,8 +16,15 @@ namespace Scraper.pyScraper
 
         public static HtmlNode GetHtml(string url)
         {
-            WebPage webpage = _browser.NavigateToPage(new Uri(url));
-            return webpage.Html;
+            if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
+            {
+                WebPage res = _browser.NavigateToPage(new Uri(url));
+                return res.Html;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public static HtmlDocument genHtmlDocument(string html)
@@ -62,7 +69,7 @@ namespace Scraper.pyScraper
                 //bad formatted html
                 Console.WriteLine(ex.Message);
             }
-            
+
             return String.Empty;
         }
 
