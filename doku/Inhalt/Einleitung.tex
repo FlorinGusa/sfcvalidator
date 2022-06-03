@@ -26,25 +26,23 @@
 \subsection{Projektbegründung} 
 \label{sec:Projektbegruendung}
 \begin{itemize}
-	\item Das Unternehmen speichert die Informationen in der Regel über die gesamte Organisation verteilt, d.h. teilweise redundant in verschiedenen Systemen, aber oft unvollständig.
-	Dies hat zur Folge, dass manche Unternehmensabteilungen nur vermeintlich mit den gleichen Daten arbeiten wie ihre Kollegen.
-	Die für den Geschäftserfolg entscheidende 360-Grad-Sicht auf Kunden oder Geschäftspartner fehlt völlig. Zudem ist die Gefahr groß,
-	dass minderwertige Daten als Grundlage für strategische Geschäftsentscheidungen verwendet werden, aus denen wiederum Unternehmensziele abgeleitet und Geschäftsprozesse modelliert werden. 
-	Damit das Unternehmen erfolgreich am Markt agieren kann, braucht es also qualitativ hochwertige Daten.
-	Das Hauptziel besteht darin, die manuelle Arbeit zu reduzieren, die oft dazu führt, dass falsche Daten im System vorhanden sind. Dies führt zu Problemen bei der Datenqualität im Unternehmen. 
-	Stattdessen kann ein Administrator einen automatisierten Job einmal pro Woche ausführen und wird über Änderungen an den Kundendaten informiert, was zu höherer Effizienz und weniger Zeitverlust bei der Suche nach den richtigen Daten führt.
-	Aus den vorgenannten Gründen hat die Leitung der IT-Abteilung mich damit beauftragt, im Rahmen meines Abschlussprojekts, die Datenqualität mit eine C# Anwendung zu steigern.
+	\item Das Unternehmen verfügt oft über Informationen, die in der gesamten Organisation verstreut sind, d.h. teilweise redundant in getrennten Systemen, aber häufig unvollständig.
+	Das hat zur Folge, dass mehrere Unternehmensbereiche scheinbar nur mit den gleichen Daten arbeiten. 
+	Die kritische 360-Grad-Perspektive von Kunden oder Geschäftspartnern fehlt somit. 
+	Darüber hinaus besteht ein erhebliches Risiko, dass unzureichende Daten als Grundlage für strategische Geschäftsentscheidungen verwendet werden, die dann zur Festlegung von Unternehmenszielen und zur Modellierung von Geschäftsprozessen herangezogen werden. 
+	Folglich sind qualitativ hochwertige Daten erforderlich, damit das Unternehmen auf dem Markt erfolgreich sein kann. Der Hauptzweck besteht darin, die manuelle Arbeit zu verringern, die häufig dazu führt, dass ungenaue Daten im System gespeichert werden. 
+    Dies führt zu Problemen bei der Datenqualität im Unternehmen. 
+	Stattdessen kann ein Administrator einmal pro Woche einen automatisierten Vorgang ausführen, um über Änderungen an den Kundendaten informiert zu werden, was die Produktivität erhöht und den Zeitaufwand für die Suche nach den relevanten Informationen verringert.
+	Aus den oben genannten Gründen beauftragte mich die Leitung der IT-Abteilung im Rahmen meines Abschlussprojekts mit der Verbesserung der Datenqualität durch eine C\#-Anwendung.
 \end{itemize}
 
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
 \begin{itemize}
-	\item Das Hauptaugenmerk liegt auf der Auswahl derjenigen Softwarekomponenten, die sich am besten in die Prozesse und die Systemumgebung des Unternehmens implementieren lassen. 
-	Eine geeignete Software kann verschiedene Faktoren der Datenqualität prüfen und erhöhen. Konkret kann dies eine Adressprüfung, eine Dublettenprüfung oder eine E-Mail-Validierung sein.
-	Bei der Auswahl dieser Softwarekomponenten müssen in jedem Fall bestehende CRM-, ERP- oder andere datenhaltende Systeme berücksichtigt werden.
-	Die aktuellen Daten werden von der CRM-Plattform Salesforce unter Verwendung der WSDL-Funktionen in eine C\#-Anwendung übernommen, die WPF für die Präsentationsschicht verwendet und einer klaren MVVM-Architektur folgt.
-	Dadurch wird eine klare Schnittstelle geschaffen, über die alle Teilsysteme laufen.
-	Die Aufgabe der besteht darin, Datenmanipulationsaufgaben und Web-Scraping-Dienste, auf einfache Weise auszuführen. 
+	\item Das Hauptaugenmerk liegt auf der Bestimmung von Softwarekomponenten, die sich am effektivsten in die Betriebs- und Systemumgebung des Unternehmens integrieren lassen.
+	In jedem Fall müssen bei der Auswahl dieser Softwarekomponenten die aktuellen CRM-, ERP- oder sonstigen datenhaltenden Systeme berücksichtigt werden. 
+	Die aktuellen Daten werden über WSDL-Methoden von Salesforce in eine C#-Anwendung transportiert, die WPF für die Präsentationsschicht nutzt und einem definierten MVVM-Design folgt. 
+	Damit wird eine logische Schnittstelle geschaffen, über die alle Subsysteme agieren können. Ziel ist es, die Datenverarbeitung und Web Scraping Services so einfach wie möglich zu gestalten.
 
 	\item Mit welchen anderen Systemen interagiert die Anwendung (technische Schnittstellen)?
 	\item Wer genehmigt das Projekt \bzw stellt Mittel zur Verfügung? 
@@ -58,6 +56,6 @@
 \begin{itemize}
 	\item Eine der größten Herausforderungen bei der Erstellung dieses Projekts ist die Definition dessen, was geschehen soll.
 	Daher ist es wichtig, den vom CRM-Entwicklungsteam benötigten Output klar zu definieren. 
-	Es wurde klargestellt, dass ein System, das Daten innerhalb der CRM-Plattform automatisch überschreibt, nicht erwünscht ist, sondern den Benutzer mit Hilfe von logisch aufgebauten Berichten benachrichtigt 
+	Es wurde klargestellt, dass ein System, das Daten innerhalb der CRM-Plattform automatisch überschreibt, nicht erwünscht ist, sondern den Benutzer mit Hilfe von logisch aufgebauten Berichten benachrichtigt.
 	Dies führt zu einer geringeren Fehleranfälligkeit, da Websites dynamisch sein oder sich ändernde Elemente aufweisen können, mit denen der Web Scraper Probleme bekommen kann.
 \end{itemize}

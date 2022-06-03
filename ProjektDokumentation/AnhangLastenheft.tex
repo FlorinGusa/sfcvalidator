@@ -1,0 +1,39 @@
+
+\subsection{Lastenheft (Auszug)}
+\label{app:Lastenheft}
+Es folgt ein Auszug aus dem Lastenheft mit Fokus auf die Anforderungen:
+
+Die Anwendung muss folgende Anforderungen erfüllen: 
+\begin{enumerate}[itemsep=0em,partopsep=0em,parsep=0em,topsep=0em]
+\item Herauslesen der Stammdaten
+	\begin{enumerate}
+	\item Die Anwendung muss Kundendaten entweder als CSV oder direkt aus Salesforce verarbeiten können.
+	\item Die Anwendung muss die Daten auf einheitliche Weise formatieren und Formatierungsregeln anwenden.
+	\end{enumerate}
+\item Darstellung der Daten
+	\begin{enumerate}
+	\item Die Anwendung muss eine einfache Möglichkeit bieten, nach Datensegmenten zu suchen und Berichte auf der Grundlage dieser Segmente zu erstellen.
+	\item Fehler und Anomalien müssen dem Nutzer deutlich angezeigt werden.
+	\item Der Benutzer sollte die Möglichkeit haben, geplante Jobs zu erstellen, zu sehen und zu löschen
+	\item Die Anwendung sollte die Daten in Salesforce nicht überschreiben, sondern den Benutzer auf Diskrepanzen aufmerksam machen
+	\item CSV-Daten, die direkt vom Dataloader kommen, sollten ohne Probleme in der Anwendung eingelesen werden können 
+ 	\item Alle eingelesenen Daten müssen in der Benutzeroberfläche sichtbar sein
+	\end{enumerate}
+\item Webscraper
+	\begin{enumerate}
+	\item Der Webscraper muss in der Lage sein, eine gegebene URL zu validieren und zu prüfen, ob die entsprechende Webseite verfügbar ist.
+	\item Der Webscraper sollte nicht versuchen, ungültig formatierte URLs anzupassen.
+	\item Der Benutzer sollte die Möglichkeit haben, Einstellungen für den Webscraper vorzunehmen, einschliesslich der Anzahl der maximalen Seiten und ob http-Seiten (unsichere Seiten) ausgelesen werden dürfen
+	\item Der Webscraper muss auf der Kommandozeile laufen können, unabhängig von der Schnittstelle.
+    \item Wenn möglich, soll der Webscraper versuchen nach einer Kontaktseite zu suchen, wenn die Informationen nicht auf der Homepage aufgeführt sind.
+\end{enumerate}
+	
+\item Sonstige Anforderungen
+	\begin{enumerate}
+	\item Die Anwendung sollte den Salesforce-Administratoren auf einem gemeinsamen Dateiserver zur Verfügung gestellt werden
+	\item Die Daten der Anwendung müssen jede Nacht \bzw nach jedem \acs{SVN}-Commit automatisch aktualisiert werden. 
+	\item Die Anwendung soll jederzeit erreichbar sein.
+	\item Da sich die Entwickler auf die Anwendung verlassen, muss diese korrekte Daten liefern und darf keinen Interpretationsspielraum lassen.
+ 	\item Mit dem Fortschreiten des CRM-Projekts müssen in späteren Phasen neue Datentypen implementiert werden.
+	\end{enumerate}
+\end{enumerate}
