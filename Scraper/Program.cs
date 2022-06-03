@@ -9,13 +9,25 @@ namespace Scraper
         {
             Console.WriteLine("Extracting emails");
             Console.WriteLine("__________________");
+            WebData webData = new WebData();
+            DataHandler handler = new DataHandler();
+            handler.AddUrlsFromCSV("accounts.csv");
 
-            var _linkList = Constants.Urls;
-            for (int i = 0; i < _linkList.LongLength; i++)
+            for (int i = 0; i < DataHandler.Urls.Count; i++)
             {
-                if (WebData.GetHtml(_linkList[i]) != null)
+                var _url = handler.GetUrlAtIndex(i).Trim('\"');
+                var _localHtml = WebData.GetHtml(_url).InnerHtml;
+                if (_localHtml != null)
                 {
-                    Console.WriteLine(WebData.getEmailsFromHTML(WebData.GetHtml(_linkList[i]).InnerHtml));
+                    var _emails = WebData.getEmailsFromHTML(_localHtml);
+                    if (_emails != "" && handler.isValidEmail(_emails))
+                    {
+                        Console.WriteLine(_emails);
+                    }
+                    else
+                    {
+                        Console.WriteLine("No emails found for: " + _url + "\n");
+                    }
                 }
             }
 

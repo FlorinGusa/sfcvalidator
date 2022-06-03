@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sfcdashboard.Model.MenuItems" Collapsed="true">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\MenuItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfcdashboard.Model.InputItems" Collapsed="true">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAA=</HashCode>
+      <FileName>Model\MenuItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfcdashboard.Model.InfoItems">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAQAAAAA=</HashCode>
+      <FileName>Model\MenuItems.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InfoView" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="sfcdashboard.Model.ConnectionItems">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Model\MenuItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfcdashboard.Model.DataItems" Collapsed="true">
+    <Position X="11" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\MenuItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfcdashboard.Model.SettingsItems" Collapsed="true">
+    <Position X="8.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Model\MenuItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfcdashboard.Model.FileItems" Collapsed="true">
+    <Position X="12.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAA=</HashCode>
+      <FileName>Model\MenuItems.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfcdashboard.Model.UrlItem" Collapsed="true">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\UrlModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Scraper.Web.WebData" Collapsed="true">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>pyScraper\WebData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sfcdashboard.View.ConnectionsView" BaseTypeListCollapsed="true">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ConnectionsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.View.InfoView" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\InfoView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="1.3" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.View.InputView" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAQA=</HashCode>
+      <FileName>View\InputView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.View.IssuesView" BaseTypeListCollapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\IssuesView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.ViewModel.ConnectionsViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\ConnectionsViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.ViewModel.InfoViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\InfoViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.ViewModel.InputViewModel" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAIAAAAAAAgAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\InputViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.ViewModel.IssuesViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\IssuesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.ViewModel.NavigationViewModel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAJBgIACAAIABAQYAABBAAAgACAAAAAAAABAAAAAgA=</HashCode>
+      <FileName>ViewModel\NavigationViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sfcdashboard.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RelayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

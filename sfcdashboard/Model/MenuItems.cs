@@ -22,6 +22,14 @@ namespace sfcdashboard.Model
     {
         public string InfoName { get; set; }
         public string InfoImage { get; set; }
+
+        public View.InfoView InfoView
+        {
+            get => default;
+            set
+            {
+            }
+        }
     }
 
     public class ConnectionItems
