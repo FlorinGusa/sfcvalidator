@@ -12,12 +12,12 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=ProjektDokumentation.tex
 
 [Frame0_View0,0]
-TopLine=9
+TopLine=0
 Cursor=825
 
 [Frame1]
@@ -30,7 +30,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Meta.tex
 
@@ -48,7 +48,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Deckblatt.tex
 
@@ -66,13 +66,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=..\doku\Allgemein\Packages.tex
 
 [Frame3_View0,0]
-TopLine=132
-Cursor=5479
+TopLine=120
+Cursor=5734
 
 [Frame4]
 Flags=0
@@ -84,7 +84,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Inhalt.tex
 
@@ -102,13 +102,13 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Inhalt\Einleitung.tex
 
 [Frame5_View0,0]
-TopLine=22
-Cursor=3442
+TopLine=0
+Cursor=964
 
 [Frame6]
 Flags=0
@@ -120,7 +120,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Inhalt\Projektplanung.tex
 
@@ -138,7 +138,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Commands.tex
 
@@ -156,7 +156,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Tabellen\ZeitplanKurz.tex
 
@@ -174,7 +174,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Inhalt\Analysephase.tex
 
@@ -192,7 +192,7 @@ MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
 NormalPos.right=1562
-NormalPos.bottom=521
+NormalPos.bottom=744
 Class=LaTeXView
 Document=Style.tex
 
@@ -202,5 +202,5 @@ Cursor=68
 
 [SessionInfo]
 FrameCount=11
-ActiveFrame=3
+ActiveFrame=5
 
