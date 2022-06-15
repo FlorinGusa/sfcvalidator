@@ -1,6 +1,6 @@
 \babel@toc {ngerman}{}
-\contentsline {section}{\nonumberline Abbildungsverzeichnis}{4}{section*.4}%
-\contentsline {section}{\nonumberline Tabellenverzeichnis}{5}{section*.6}%
+\contentsline {section}{\nonumberline Abbildungsverzeichnis}{3}{section*.4}%
+\contentsline {section}{\nonumberline Tabellenverzeichnis}{4}{section*.6}%
 \contentsline {section}{\numberline {1}Einleitung}{1}{section.7}%
 \contentsline {subsection}{\numberline {1.1}Projektumfeld}{1}{subsection.8}%
 \contentsline {subsection}{\numberline {1.2}Projektziel}{1}{subsection.9}%
@@ -8,22 +8,20 @@
 \contentsline {subsection}{\numberline {1.4}Projektschnittstellen}{2}{subsection.11}%
 \contentsline {subsection}{\numberline {1.5}Projektabgrenzung}{2}{subsection.12}%
 \contentsline {section}{\numberline {2}Projektplanung}{2}{section.13}%
-\contentsline {subsection}{\numberline {2.1}Projektphasen}{3}{subsection.14}%
-\contentsline {subsection}{\numberline {2.2}Abweichungen vom Projektantrag}{3}{subsection.15}%
-\contentsline {subsection}{\numberline {2.3}Ressourcenplanung}{3}{subsection.16}%
-\contentsline {subsection}{\numberline {2.4}Entwicklungsprozess}{3}{subsection.17}%
-\contentsline {section}{\numberline {3}Analysephase}{4}{section.18}%
-\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{4}{subsection.19}%
-\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{4}{subsection.20}%
-\contentsline {subsubsection}{\numberline {3.2.1}\glqq {}Make or Buy\grqq {}-Entscheidung}{5}{subsubsection.21}%
-\contentsline {subsubsection}{\numberline {3.2.2}Projektkosten}{5}{subsubsection.22}%
-\contentsline {paragraph}{\nonumberline Beispielrechnung (verk\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }rzt)}{5}{paragraph*.24}%
-\contentsline {subsubsection}{\numberline {3.2.3}Amortisationsdauer}{5}{subsubsection.26}%
-\contentsline {paragraph}{\nonumberline Beispielrechnung (verk\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }rzt)}{6}{paragraph*.28}%
-\contentsline {subsection}{\numberline {3.3}Nutzwertanalyse}{6}{subsection.29}%
+\contentsline {subsection}{\numberline {2.1}Projektphasen}{2}{subsection.14}%
+\contentsline {subsection}{\numberline {2.2}Abweichungen vom Projektantrag}{3}{subsection.16}%
+\contentsline {subsection}{\numberline {2.3}Ressourcenplanung}{3}{subsection.17}%
+\contentsline {subsection}{\numberline {2.4}Entwicklungsprozess}{3}{subsection.18}%
+\contentsline {section}{\numberline {3}Analysephase}{4}{section.19}%
+\contentsline {subsection}{\numberline {3.1}Ist-Analyse}{4}{subsection.20}%
+\contentsline {subsection}{\numberline {3.2}Wirtschaftlichkeitsanalyse}{4}{subsection.21}%
+\contentsline {subsubsection}{\numberline {3.2.1}\glqq {}Make or Buy\grqq {}-Entscheidung}{4}{subsubsection.22}%
+\contentsline {subsubsection}{\numberline {3.2.2}Projektkosten}{5}{subsubsection.23}%
+\contentsline {paragraph}{\nonumberline D}{5}{paragraph*.25}%
+\contentsline {subsubsection}{\numberline {3.2.3}Amortisationsdauer}{5}{subsubsection.27}%
+\contentsline {paragraph}{\nonumberline Beispielrechnung (verk\"urzt)}{6}{paragraph*.29}%
 \contentsline {paragraph}{\nonumberline Beispiel}{6}{paragraph*.31}%
-\contentsline {subsection}{\numberline {3.4}Anwendungsf\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }lle}{6}{subsection.32}%
-\contentsline {subsection}{\numberline {3.5}Qualit\IeC {\"\i }\IeC {\textquestiondown }\IeC {\textonehalf }tsanforderungen}{7}{subsection.33}%
-\contentsline {subsection}{\numberline {3.6}Lastenheft/Fachkonzept}{7}{subsection.34}%
-\contentsline {subsection}{\numberline {3.7}Lastenheft (Auszug)}{7}{subsection.35}%
+\contentsline {subsection}{\numberline {3.3}Anwendungsf\"alle}{6}{subsection.32}%
+\contentsline {subsection}{\numberline {3.4}Lastenheft}{6}{subsection.33}%
+\contentsline {subsection}{\numberline {3.5}Lastenheft (Auszug)}{7}{subsection.34}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

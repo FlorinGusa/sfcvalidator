@@ -1,0 +1,68 @@
+\section{Entwurfsphase} 
+\label{sec:Entwurfsphase}
+\label{sec:Entwurfsphase}
+
+\subsection{Zielplattform}
+\label{sec:Zielplattform}
+
+\begin{itemize}
+	\item 
+Alle Salesforce-Administratoren innerhalb von FANUC nutzen einen Windows-Rechner,
+Deshalb wird dieses Projekt auch in Form eines C\# Windows 
+Anwendung umgesetzt. Die Anwendung soll den Salesforce-Administratoren auf einem gemeinsamen Fileserver zur Verfügung stehen.
+Eine Vielzahl von bestehender Software innerhalb der FANUC Deutschland GmbH ist in C\# geschrieben, so dass die Module auch in anderen Anwendungen verwendet werden können. Der Autor ist mit C# ebenfalls bestens vertraut, und da die Anwendung nicht auf einem Browser oder einem eingebetteten Gerät laufen muss, wurde die Wahl zusammen mit dem Managementteam getroffen.
+Als Framework für die Benutzeroberfläche wurde WPF gewählt, da es das am weitesten verbreitete Framework für die Softwareentwicklung ist.
+
+Eine wichtige Entscheidung war die Wahl des besten Web-Scraping-Frameworks, und nach einer Suche im Internet nach den beliebtesten existierenden Frameworks fiel die Wahl auf Scrapy. Die Vorteile waren, dass es die Möglichkeit gibt, RPC auszuführen und den Scraper völlig unabhängig von der Benutzeroberfläche zu betreiben. Es hat sich außerdem als das schnellste System für die Suche nach Ergebnissen erwiesen und verfügt über eine C\#-Schnittstelle namens ScrapySharp, die eine zusätzliche Schicht unnötig macht.
+
+Die Verbindung zu Salesforce wird über die bestehende REST-API von Salesforce hergestellt.
+Die Authentifizierung gegenüber der API erfolgt über die Klasse HttpClient für asynchronen HTTP-Aufrufe, die von Salesforce benötigt wird. Dies kann auch synchron erfolgen, wenn das Schlüsselwort ''Result'' bei asynchronen Aufrufen verwendet wird.
+
+Weitere Erklärungen zu den verschiedenen API-Typen finden sich in Anhang 4
+\end{itemize}
+
+
+\subsection{Architekturdesign}
+\label{sec:Architekturdesign}
+
+\begin{itemize}
+	\item 
+Die Implementierung soll unter Verwendung des Model-View-View-Model (MVVM) Architekturmusters entwickelt werden. Die Komponenten werden in Anhang 5 ausführlicher dargestellt. Im MVVM-Architekturmuster ist die Logik von der Benutzeroberfläche getrennt, was eine bessere Testbarkeit im Vergleich zur Model-View-Controller (MVC)-Architektur bietet.
+
+Das Modell repräsentiert Entitäten, die die Kommunikation zwischen dem Webscraper und der Benutzeroberfläche vereinheitlichen. Das Viewmodel steuert und holt Daten aus dem Web-Scraper und zeigt sie dem Benutzer in Form eines Reports an.
+
+Der Vorteil dieses Architekturmusters ist, dass alle Komponenten austauschbar sind,
+da sie nur über die festgelegten Schnittstellen kommunizieren.
+Dadurch ist es z.B. möglich, die View-Schicht in Zukunft problemlos zu ersetzen, da die anderen Schichten keine direkten Abhängigkeiten von dieser haben.
+
+Der Webscraper läuft auf einer separaten Laufzeitumgebung, die völlig unabhängig von der Benutzeroberfläche ist. Dies hat den Vorteil, dass es schneller ist und sich flexibel an künftige Änderungen anpassen lässt. Dies kann auch bedeuten, dass der Webscraper unabhängig von einer Kommandozeile ohne die Benutzeroberfläche ausgeführt werden kann, was einem Salesforce-Administrator die Möglichkeit gibt, mehrere Jobs gleichzeitig auszuführen.
+\end{itemize}
+
+
+\subsection{Benutzeroberflache}
+\label{sec:Entwurf der Benutzeroverfl\"ache}
+\begin{itemize}
+	\item 
+Die Salesforce-Administratoren wurden in die Entwicklung der Benutzeroberfläche einbezogen, damit die gelieferte Anwendung auch ihren Erwartungen entspricht. Zu diesem Zweck wurden
+wurden Mockups erstellt und den Salesforce-Administratoren präsentiert, die dann iterativ in ein finales Design umgesetzt wurden.
+
+Diese Mockups finden sich auf den Anlagen 5 und 6.
+
+In den Mockups werden verschiedene Ansichten mit mehreren Listenansichten und Schaltern gezeigt, außerdem einige benutzerdefinierte Steuerelemente, die manuell implementiert wurden.
+Das Fenster hat eine feste Größe, da das Programm nur auf Desktop-Computern ausgeführt werden muss, daher gibt es keine Responsivität.
+Alle diese Ansichten sind über eine Navigationsleiste auf der linken Seite des Fensters zugänglich.
+
+Der Benutzer verfügt über eine Ansicht für die Eingabe, die zum Importieren und Exportieren von Daten entweder aus einer Comma-separated values (CSV) Datei oder direkt aus Salesforce unter Verwendung des Authentifizierungsverfahrens abgelesen wird.
+Hier können einige Einstellungen von der Benutzerseite aus geändert werden, wie z.B. die maximale Anzahl der Seiten, die vom Webscraper verwendet werden sollen.
+Es ist außerdem eine Infoansicht vorhanden, die als Informationszentrum dient, in dem die Reports über vergangene und laufende Jobs erstellen und anzeigen kann. Der Benutzer kann benutzerdefinierte Filter setzen, z. B. nach einem Datum oder einem bestimmten Feld filtern. 
+In der Ansicht "Läufe" kann der Benutzer den Status vergangener Builds planen und einsehen. Die Planung von Durchläufen wird verwaltet durch Windows Task Scheduler (WTS) die es ermöglicht, dass die Anwendung zu einem bestimmten Datum und einer bestimmten Uhrzeit (in vorliegendem Fall alle 7 Tage) ausgeführt wird.
+Die Reports werden mit Hilfe von gefilterten Listenansichten erstellt, die direkt aus der Software in ein CSV-Format exportiert werden können. 
+\end{itemize}
+
+\subsection{Datenmodell}
+\label{sec:Datenmodell}
+\begin{itemize}
+	\item 
+Das Projekt ist in zwei separate Teilprojekte aufgeteilt, eines für die Logik und die Benutzeroberfläche und eines für den Webscraper.
+Die Entitäten für den Webscraper sind: URLModel, EmailModel, AccountModel, DataManager, Logger und Validator
+\end{itemize}

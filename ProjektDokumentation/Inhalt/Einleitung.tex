@@ -6,52 +6,50 @@
 \subsection{Projektumfeld} 
 \label{sec:Projektumfeld}
 \begin{itemize}
-	\item Die folgende Projektdokumentation schildert den Ablauf des IHK-Abschlussprojektes, welches der Autor im Rahmen seiner Ausbildung zum Fachinformatiker mit Fachrichtung Anwendungsentwicklung
-	durchgeführthat. Ausbildungsbetrieb ist die Fanuc Europe GmbH.
+	\item Die folgende Projektdokumentation schildert den Ablauf des IHK-Abschlussprojektes, welches der Autor im Rahmen seiner Ausbildung zum Fachinformatiker mit Fachrichtung Anwendungsentwicklung durchgef\"uhrthat. Ausbildungsbetrieb ist die Fanuc Europe GmbH.
 \end{itemize}
 
 \subsection{Projektziel} 
 \label{sec:Projektziel}
 \begin{itemize}
-	\item Im CRM-System der Fanuc Europe befinden sich über 220.000 Kundenkonten, die Daten wie
+  \item Im CRM-System der Fanuc Europe befinden sich \"uber 220.000 Kundenkonten, die Daten wie
 	Adresse, Telefonnummer und Website des Kunden enthalten. Zur Automatisierung der
 	Verwaltung dieser Kunden wird die Salesforce CRM-Plattform verwendet.
-	\item Da es unmöglich ist, Änderungen an den Kundendaten manuell zu verfolgen, ist die Erstellung
-	eines Web-Scraping-Systems geplannt. Diese Anwendung automatisiert die jeweiligen
-	Kontaktseiten Im Internet herauslesen und vergleicht sie mit den aktuellen Daten im
-	CRM-System.
+	Da es unm\"oglich ist, \"Anderungen an den Kundendaten manuell zu verfolgen, ist die Erstellung
+	eines Web-Scraping-Systems geplant. Die Anwendung liest die Kontaktseiten der Kunden automatisiert und speichert sie in einem gemeinsamen Puffer.
+	In diesem Puffer werden dann Tests durchgef\"uhrt, die die Daten mit den entsprechenden Daten in Salesforce abgleichen.
+	Diese Aufgabe wurde vom Salesforce-Administrationsteam zugewiesen, dessen Ziel es ist, die Datenqualit\"at innerhalb des CRM-Systems zu erh\"ohen. F\"ur die Messung dieses Faktors wurde eine aktuelle Sch\"atzung f\"ur falsch eingegebene Daten von etwa 20\% ermittelt. Dies ist f\"ur das Marketing und die Kundenbeziehungen von entscheidender Bedeutung, da eines der Hauptziele des Unternehmens die Steigerung der Kundenzufriedenheit ist. Erwartet ist, dass mit diese Anwendung 44000 Testergebnisse erstellt werden k\"onnen, die \"uber eine moderne und intuitive Schnittstelle angezeigt werden, um Salesforce-Administratoren einen klaren \"Uberblick \"uber die Daten zu geben.
+
 \end{itemize}
 
 
-\subsection{Projektbegründung} 
+\subsection{Projektbegr\"undung} 
 \label{sec:Projektbegruendung}
 \begin{itemize}
-	\item Das Unternehmen verfügt oft über Informationen, die in der gesamten Organisation verstreut sind, d.h. teilweise redundant in getrennten Systemen, aber häufig unvollständig.
+  \item	Das Unternehmen verf\"ugt oft \"uber Informationen, die in der gesamten Organisation verstreut sind, d.h. teilweise redundant in getrennten Systemen, aber h\"aufig unvollst\"andig.
 	Das hat zur Folge, dass mehrere Unternehmensbereiche scheinbar nur mit den gleichen Daten arbeiten. 
-	Die kritische 360-Grad-Perspektive von Kunden oder Geschäftspartnern fehlt somit. 
-	Darüber hinaus besteht ein erhebliches Risiko, dass unzureichende Daten als Grundlage für strategische Geschäftsentscheidungen verwendet werden, die dann zur Festlegung von Unternehmenszielen und zur Modellierung von Geschäftsprozessen herangezogen werden. 
-	Folglich sind qualitativ hochwertige Daten erforderlich, damit das Unternehmen auf dem Markt erfolgreich sein kann. Der Hauptzweck besteht darin, die manuelle Arbeit zu verringern, die häufig dazu führt, dass ungenaue Daten im System gespeichert werden. 
-    Dies führt zu Problemen bei der Datenqualität im Unternehmen. 
-	Stattdessen kann ein Administrator einmal pro Woche einen automatisierten Vorgang ausführen, um über Änderungen an den Kundendaten informiert zu werden, was die Produktivität erhöht und den Zeitaufwand für die Suche nach den relevanten Informationen verringert.
-	Aus den oben genannten Gründen beauftragte mich die Leitung der IT-Abteilung im Rahmen meines Abschlussprojekts mit der Verbesserung der Datenqualität durch eine C\#-Anwendung.
+	Die kritische 360-Grad-Perspektive von Kunden oder Gesch\"aftspartnern fehlt somit. 
+	Dar\"uber hinaus besteht ein erhebliches Risiko, dass unzureichende Daten als Grundlage f\"ur strategische Gesch\"aftsentscheidungen verwendet werden, die dann zur Festlegung von Unternehmenszielen und zur Modellierung von Gesch\"aftsprozessen herangezogen werden. 
+	Folglich sind qualitativ hochwertige Daten erforderlich, damit das Unternehmen auf dem Markt erfolgreich sein kann. Der Hauptzweck besteht darin, die manuelle Arbeit zu verringern, die h\"aufig dazu f\"uhrt, dass ungenaue Daten im System gespeichert werden. 
+    Dies f\"uhrt zu Problemen bei der Datenqualit\"at im Unternehmen. 
+	Stattdessen kann ein Administrator einmal pro Woche einen automatisierten Vorgang ausf\"uhren, um \"uber \"Anderungen an den Kundendaten informiert zu werden, was die Produktivit\"at erh\"oht und den Zeitaufwand f\"ur die Suche nach den relevanten Informationen verringert.
+
 \end{itemize}
 
 \subsection{Projektschnittstellen} 
 \label{sec:Projektschnittstellen}
-\begin{itemize}
-	\item Das Hauptaugenmerk liegt auf der Bestimmung von Softwarekomponenten, die sich am effektivsten in die Betriebs- und Systemumgebung des Unternehmens integrieren lassen.
-	In jedem Fall müssen bei der Auswahl dieser Softwarekomponenten die aktuellen CRM-, ERP- oder sonstigen datenhaltenden Systeme berücksichtigt werden. 
-	Die aktuellen Daten werden über WSDL-Methoden von Salesforce in eine C\#-Anwendung transportiert, die WPF für die Präsentationsschicht nutzt und einem definierten MVVM-Design folgt. 
-	Damit wird eine logische Schnittstelle geschaffen, über die alle Subsysteme agieren können. Ziel ist es, die Datenverarbeitung und Web Scraping Services so einfach wie möglich zu gestalten.
-
+\begin{itemize} 
+  \item Das Hauptaugenmerk liegt auf der Bestimmung von Softwarekomponenten, die sich am effektivsten in die Betriebs- und Systemumgebung des Unternehmens integrieren lassen.
+	In jedem Fall m\"ussen bei der Auswahl dieser Softwarekomponenten die aktuellen CRM-, ERP- oder sonstigen datenhaltenden Systeme ber\"ucksichtigt werden. 
+	Die aktuellen Daten werden \"uber WSDL-Methoden von Salesforce in eine C\#-Anwendung transportiert, die WPF f\"ur die Pr\"asentationsschicht nutzt und einem definierten MVVM-Design folgt. 
+	Damit wird eine logische Schnittstelle geschaffen, \"uber die alle Subsysteme agieren k\"onnen. Ziel ist es, die Datenverarbeitung und Web Scraping Services so einfach wie m\"oglich zu gestalten.
 \end{itemize}
 
 
 \subsection{Projektabgrenzung} 
 \label{sec:Projektabgrenzung}
 \begin{itemize}
-	\item Eine der größten Herausforderungen bei der Erstellung dieses Projekts ist die Definition dessen, was geschehen soll.
-	Daher ist es wichtig, den vom CRM-Entwicklungsteam benötigten Output klar zu definieren. 
-	Es wurde klargestellt, dass ein System, das Daten innerhalb der CRM-Plattform automatisch überschreibt, nicht erwünscht ist, sondern den Benutzer mit Hilfe von logisch aufgebauten Berichten benachrichtigt.
-	Dies führt zu einer geringeren Fehleranfälligkeit, da Websites dynamisch sein oder sich ändernde Elemente aufweisen können, mit denen der Web Scraper Probleme bekommen kann.
+	\item Eine der gr\"o{ss}ten Herausforderungen bei der Erstellung dieses Projekts ist die Definition dessen, was geschehen soll.
+	Daher ist es wichtig, den vom CRM-Entwicklungsteam ben\"otigten Output klar zu definieren. 
+	Es wurde klargestellt, dass ein System, das Daten innerhalb der CRM-Plattform automatisch \"uberschreibt, nicht erw\"unscht ist, sondern den Benutzer mit Hilfe von logisch aufgebauten Berichten benachrichtigt.
 \end{itemize}
